@@ -1,0 +1,3 @@
+openai>=2.0,<4
+cryptography>=44,<48
+qrcode[pil]>=8,<9

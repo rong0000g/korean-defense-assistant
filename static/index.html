@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1725">
+  <title>韩语答辩助手</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <span class="tag">静音文字模式</span>
+      <h1>韩语答辩助手</h1>
+      <p>手机收音；电脑处理。韩语分段转写，停顿后给出中韩双语答法。</p>
+    </header>
+    <section class="panel controls">
+      <div id="status" role="status">尚未开始</div>
+      <div class="buttons">
+        <button id="start">开始收音</button>
+        <button id="stop" disabled>停止</button>
+        <button id="quick-test" type="button">测试完整提问</button>
+      </div>
+      <label for="sensitivity">收音灵敏度 <output id="sensitivity-value">中</output></label>
+      <input id="sensitivity" type="range" min="0.004" max="0.035" step="0.001" value="0.012">
+      <div id="mic-level">麦克风：尚未开始</div>
+      <small>环境噪音多时向右调；教授声音小或较远时向左调。请说完整韩语问句，页面需保持在前台、屏幕亮起。</small>
+    </section>
+    <section class="panel live">
+      <h2>正在处理</h2>
+      <div id="live">等待讲话…</div>
+      <small id="latency">上次处理耗时：等待测试</small>
+    </section>
+    <section class="results">
+      <h2>答辩记录</h2>
+      <div id="results"></div>
+    </section>
+    <details class="panel">
+      <summary>用韩文文字测试回答</summary>
+      <textarea id="manual" rows="3" placeholder="이 연구의 핵심 질문은 무엇입니까?"></textarea>
+      <button id="submit">生成回答</button>
+    </details>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>

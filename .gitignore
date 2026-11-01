@@ -1,0 +1,13 @@
+.venv/
+.local/
+__pycache__/
+*.pyc
+.env
+.env.*
+last_status.txt
+defense_context.txt
+defense_qa.txt
+*.key
+*.pem
+*.cer
+phone-qr*.png
